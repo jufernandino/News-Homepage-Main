@@ -1,0 +1,214 @@
+@font-face { /*Inserir uma fonte nova*/
+    font-family: Inter ;
+    src: url("Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+body{
+    margin: 0px;
+    box-sizing: border-box; /*Não alterar o valores das proporções com a borda ou pading*/
+    height: auto;
+    width: auto;
+    background-color: hsl(36, 100%, 99%); /*Off-white*/
+    font-family: "Inter", Helvetica, sans-serif; /*Definir fonte padrão do body*/
+}
+
+/*CABEÇALHO ##########################################################################################################*/
+nav{
+    position:fixed and static; /*Barra de Menu fica sempre no topo*/
+    overflow: hidden; /*Esconder conteudos que sairem da área*/
+    width: 100%;
+    height: auto;
+    box-sizing: border-box; /*Não alterar o valores das proporções com a borda ou padding*/   
+    padding: 60px 120px 40px 120px;/*margem interna do elemento*/
+    /* padding: topo, direita, baixo, esquerda Se houver um valor apenas, considerar para os 4 lados.*/
+}
+/*LOGO ---------------------------------------------------------------------------------------------------------------*/
+#logo{
+    float: left; /*Posiconar na esquerda*/
+    display: block; 
+    font-size: xxx-large;
+    font-weight:bolder; /*Espessura da fonte*/
+    color: hsl(240, 100%, 5%); 
+    font-family: 'Times New Roman', Times, serif;
+}
+/*MENU ---------------------------------------------------------------------------------------------------------------*/
+#menu{ /*Configuração da div "menu"*/
+    float: right; /*Posiconar na direita*/
+    display: block;
+    box-sizing: border-box; /*Não alterar o valores das proporções com a borda ou padding*/
+    font-weight: 400; /*Espessura da fonte*/
+}
+.LinkMenu{ /*Configuração para os links do Menu*/
+    text-decoration:none; 
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+    display: inline;
+    padding: 20px; /*Distancia dos entre os icones do Menu*/  
+}
+.LinkMenu:hover{ 
+    color: hsl(5, 85%, 63%); /*Muda a cor da letra quando o mouse passa por cima*/
+}
+/*FIM CABEÇALHO ######################################################################################################*/
+
+/*ÁREA PRINCIPAL #####################################################################################################*/
+section{
+    position: relative;
+    top:-20px; 
+    height: 500px;
+    width: 100%;
+    box-sizing: border-box;/*Não alterar o valores das proporções com a borda ou padding*/   
+    padding: 0px 120px 0px 120px; /*Margem interna igual a do "nav" */
+
+    display: flex;
+    display: -webkit-flex; /*Para versão mais antigas do Chromo Firefox */
+    display: -moz-flex; /*Para versão mais antigas do Mozila*/
+}
+
+.item {
+    height:100px;
+    background-color: hsl(240, 100%, 5%);
+    text-align: left;
+}
+/*/*SESSÃO À ESQUERDA-------------------------------------------------------------------------------------------------*/
+.container{
+    width: 70%;
+    height: 500px;
+    margin-right: 40px;
+    background-color: hsl(36, 100%, 99%);
+}
+
+#img1{ /*Imagem Principal*/
+    width:100%;
+    height:auto;
+}
+
+#area{ /*Area com texto abaixo da imagem*/
+    display: flex;
+    display: -webkit-flex; /*Para versão mais antigas do Chromo Firefox */
+    display: -moz-flex; /*Para versão mais antigas do Mozila*/
+    justify-content:right;
+    height: 200px;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+#TituloImg{ /*Titulo*/
+    font-size: xxx-large;
+    font-weight: 800;
+    width: 40%;
+    margin-top: 0px;
+    color: hsl(240, 100%, 5%);
+    box-sizing: border-box;    
+}
+
+#ConteudoCentro{ /*Texto central*/
+    width: 60%;
+    display: flex;
+    display: -webkit-flex; /*Para versão mais antigas do Chromo Firefox */
+    display: -moz-flex; /*Para versão mais antigas do Mozila*/
+    flex-direction: column;
+}
+
+#TextoParagrafo { /*Texto*/
+    width: 100%;
+    float: right;
+    padding-left: 50px;
+    padding-right: 30px;
+    box-sizing: border-box;   
+    text-align: left; 
+    color: hsl(236, 13%, 42%);
+    font-weight: 400;
+}
+#TextoBotao { /*Botao*/
+    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    width:200px;
+    padding: 15px;
+    margin-left: 50px;
+    letter-spacing: 5px;
+}
+#TextoBotao:hover{ 
+    background-color:hsl(240, 100%, 5%); /*Muda a cor da letra quando o mouse passa por cima*/
+}
+
+/*SESSÃO COM AS NOTICIAS----------------------------------------------------------------------------------------------*/
+.news{ /*CLASSE PARA AS NOTICIAS*/
+    width: 30%;
+    height:100%;
+    box-sizing: border-box;
+    padding: 20px;
+    
+}
+#TituloNew{ /*TITULO*/
+    height: 30px;
+    color: hsl(35, 77%, 62%);/*Soft orange*/
+    font-size: x-large;   
+    text-align:start; 
+}
+.Sub{ /*PEQUENAS NOTÍCIAS*/
+    height:110px;
+    color: hsl(36, 100%, 99%); /*Off-white*/
+    font-weight: 200; /*Espessura da fonte*/
+}
+.LinkNoticias{ /*Configuração para os links das Noticias*/
+    text-decoration:none; 
+    color: hsl(36, 100%, 99%); /*Off-white*/
+    
+}
+.LinkNoticias:hover{ /*Muda a cor da letra quando o mouse passa por cima*/
+    color:  hsl(35, 77%, 62%);
+}
+/*FIM DA ÁREA PRINCIPAL ##############################################################################################*/
+
+/*ÁREA INFERIOR ######################################################################################################*/
+footer{
+    display: flex;
+    width: auto;
+    height: 150px;
+    padding: 0px 120px 0px 120px; /*Margem interna igual a do "nav" */
+    justify-content:space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.text{ /*Area com texto em geral*/
+    width:20%;
+    height:150px ;
+    font-size: small; 
+    color: hsl(236, 13%, 42%);
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.numero{ /*O numero tem cor diferente*/
+    color:hsl(233, 8%, 79%);
+}
+.Assunto{
+    color: hsl(240, 100%, 5%);
+}
+.Assunto:hover{ /*Muda a cor do título quando o mouse passa por cima*/
+    color: hsl(5, 85%, 63%);
+}
+
+/*Imagens*/
+#image1{
+    width: 120px;
+}
+#image2{
+    width: 120px;
+}
+#image3{
+    width: 120px;
+}
+/*FIM DA ÁREA INFERIOR ######################################################################################################*/
+
+/* ATRIBUIÇÕES DO PROJETO ###################################################################################################*/
+.attribution{
+    float: right;
+}
